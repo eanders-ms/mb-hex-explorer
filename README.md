@@ -1,6 +1,6 @@
 # Intel Hex Explorer
 
-## Displays a map of the memory occupied by data blocks described in an Intel Hex formatted file.
+Displays a map of the memory occupied by data blocks described in an Intel Hex formatted file.
 
 Try it out! https://eanders-ms.github.io/mb-hex-explorer/
 
