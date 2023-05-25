@@ -20,7 +20,8 @@ export async function loadHexFileAsync(file: File) {
                 const reader = new FileReader();
                 reader.onload = ev => {
                     try {
-                        let str = ev.target?.result as string;
+                        let str = ev.target?.result as string ?? "";
+                        str = str.replaceAll("\r\n", "\n");
                         let isUniversalHex = false;
                         try {
                             isUniversalHex = muh.isUniversalHex(str);
