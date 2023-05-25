@@ -13,6 +13,11 @@ export function commaFormatted(num: string | number): string {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+export function truncateStr(str: string, len: number): string {
+    const dots = str.length > len ? "..." : "";
+    return str.substring(0, len) + dots;
+}
+
 export const decodeBase64 = function (s: string) {
     return atob(s);
 };

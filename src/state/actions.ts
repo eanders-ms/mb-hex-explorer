@@ -39,13 +39,7 @@ type DismissToast = ActionBase & {
  * Union of all actions
  */
 
-export type Action =
-    | SetPage
-    | SetFilename
-    | SetHexes
-    | ShowToast
-    | DismissToast
-    ;
+export type Action = SetPage | SetFilename | SetHexes | ShowToast | DismissToast;
 
 /**
  * Action creators
@@ -53,30 +47,28 @@ export type Action =
 
 export const setPage = (page: PageName): SetPage => ({
     type: "SET_PAGE",
-    page,
+    page
 });
 
 export const setFilename = (filename: string): SetFilename => ({
     type: "SET_FILENAME",
-    filename,
+    filename
 });
 
-export const setHexes = (
-    hexes: MappedHex[]
-): SetHexes => ({
+export const setHexes = (hexes: MappedHex[]): SetHexes => ({
     type: "SET_HEXES",
-    hexes,
+    hexes
 });
 
 export const showToast = (toast: Toast): ShowToast => ({
     type: "SHOW_TOAST",
     toast: {
         id: nanoid(8),
-        ...toast,
-    },
+        ...toast
+    }
 });
 
 export const dismissToast = (id: string): DismissToast => ({
     type: "DISMISS_TOAST",
-    id,
+    id
 });

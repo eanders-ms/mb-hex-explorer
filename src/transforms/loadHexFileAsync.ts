@@ -2,7 +2,7 @@ import * as muh from "@microbit/microbit-universal-hex";
 import { dispatch } from "../state";
 import { dismissToast, setPage, setHexes, showToast, setFilename } from "../state/actions";
 import { MappedHex } from "../types";
-import { decompressCachedHex, parseDataChunks } from "./../utils";
+import { decompressCachedHex, parseDataChunks, truncateStr } from "./../utils";
 
 export async function loadHexFileAsync(file: File) {
     dispatch(setPage("load-hex"));
@@ -72,7 +72,7 @@ export async function loadHexFileAsync(file: File) {
         dispatch(
             showToast({
                 type: "error",
-                text: `${e.message || "Something went wrong."}`,
+                text: e.message ? truncateStr(e.message, 50) : "Something went wrong.",
                 timeoutMs: 10000
             })
         );

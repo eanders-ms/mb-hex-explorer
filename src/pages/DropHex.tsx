@@ -72,16 +72,6 @@ export default function Render() {
         setDragging(false);
     };
 
-    const handleDrop = async (e: React.DragEvent) => {
-        e.preventDefault();
-        e.stopPropagation();
-        setDragging(false);
-        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-            dispatch(dismissToast(toast.toast.id));
-            await loadHexFileAsync(e.dataTransfer.files[0]);
-        }
-    };
-
     const handleDropTargetClick = () => {
         inputRef.current?.click();
     };
@@ -115,7 +105,6 @@ export default function Render() {
                     onMouseLeave={handleMouseLeave}
                     onDragEnter={handleDragEnter}
                     onDragLeave={handleDragLeave}
-                    onDrop={handleDrop}
                 >
                     <p>Drop file here</p>
                     <p style={{ padding: "0.5em 0" }}>or</p>
