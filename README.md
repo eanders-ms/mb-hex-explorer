@@ -16,6 +16,5 @@ Tested with
 * `git clone https://github.com/eanders-ms/mb-hex-explorer`
 * `cd mb-hex-explorer`
 * `npm install`
-* `echo "PUBLIC_URL=http://localhost:3000" > .env.development.local`
 * `npm run start`
 
