@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/mb-hex-explorer/static/js/main.3f58a385.js",
+    "index.html": "/mb-hex-explorer/index.html",
+    "main.3f58a385.js.map": "/mb-hex-explorer/static/js/main.3f58a385.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.3f58a385.js"
+  ]
+}
