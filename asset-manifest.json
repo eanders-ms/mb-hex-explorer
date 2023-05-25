@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/mb-hex-explorer/static/js/main.0ed5a14e.js",
-    "index.html": "/mb-hex-explorer/index.html",
-    "main.0ed5a14e.js.map": "/mb-hex-explorer/static/js/main.0ed5a14e.js.map"
+    "main.js": "http://localhost:3000/static/js/main.23ab1b2e.js",
+    "index.html": "http://localhost:3000/index.html",
+    "main.23ab1b2e.js.map": "http://localhost:3000/static/js/main.23ab1b2e.js.map"
   },
   "entrypoints": [
-    "static/js/main.0ed5a14e.js"
+    "static/js/main.23ab1b2e.js"
   ]
 }
