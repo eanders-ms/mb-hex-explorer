@@ -8,6 +8,31 @@ import ShowHex from "./pages/ShowHex";
 import Toast from "./components/Toast";
 import { loadHexFileAsync } from "./transforms";
 
+const AppContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f1f5f9;
+`;
+
+const Footer = styled.div``;
+
+const FooterButton = styled.button`
+    background-color: #eef2ff;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    margin: 0.3em;
+    font-size: 0.75em;
+    font-weight: lighter;
+    color: #6b7280;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    &:hover {
+        background-color: #f8fafc;
+    }
+`;
+
 function App() {
     const { state } = useContext(AppStateContext);
     const { page } = state;
@@ -39,13 +64,19 @@ function App() {
     }, []);
 
     return (
-        <>
+        <AppContainer>
             <GlobalStyles />
             <Toast />
             {page === "drop-hex" && <DropHex />}
             {page === "load-hex" && <LoadHex />}
             {page === "show-hex" && <ShowHex />}
-        </>
+            <div style={{ flex: 1 }}></div>
+            <Footer>
+                <FooterButton onClick={() => window.open("https://github.com/eanders-ms/mb-hex-explorer", "_blank")}>
+                    github
+                </FooterButton>
+            </Footer>
+        </AppContainer>
     );
 }
 

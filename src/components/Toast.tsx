@@ -184,8 +184,8 @@ const ToastsContainer = styled.div`
     position: fixed;
     bottom: 0;
     right: 0;
-    margin-bottom: 2rem;
-    margin-right: 2rem;
+    margin-bottom: 1em;
+    margin-right: 1em;
     z-index: 50;
     pointer-events: none;
 `;
