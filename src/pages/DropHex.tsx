@@ -144,10 +144,10 @@ export default function Render() {
         try {
             e.preventDefault();
             e.stopPropagation();
-            dispatch(clearToasts());
             const resp = await fetch(samples[index].url);
             const blob = await resp.blob();
             const file = new File([blob], samples[index].url);
+            dispatch(clearToasts());
             await loadHexFileAsync(file);
         } catch (e) {
             dispatch(

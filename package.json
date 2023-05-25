@@ -2,7 +2,7 @@
   "name": "mb-hex-explorer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://eanders-ms.github.io/mb-hex-explorer",
+  "homepage": ".",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
@@ -28,7 +28,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "clean": "rimraf build"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "rimraf": "^5.0.1"
   }
 }
