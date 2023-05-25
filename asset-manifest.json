@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.0ed5a14e.js",
-    "index.html": "/index.html",
-    "main.0ed5a14e.js.map": "/static/js/main.0ed5a14e.js.map"
+    "main.js": "/mb-hex-explorer/static/js/main.0ed5a14e.js",
+    "index.html": "/mb-hex-explorer/index.html",
+    "main.0ed5a14e.js.map": "/mb-hex-explorer/static/js/main.0ed5a14e.js.map"
   },
   "entrypoints": [
     "static/js/main.0ed5a14e.js"
