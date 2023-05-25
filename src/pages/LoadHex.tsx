@@ -1,7 +1,4 @@
-import React from "react";
-import { useContext, useRef, useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import { faTimesCircle } from "@fortawesome/free-regular-svg-icons";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

@@ -35,5 +35,11 @@ export default function reducer(state: AppState, action: Action): AppState {
                 toasts: state.toasts.filter(t => t.id !== action.id)
             };
         }
+        case "CLEAR_TOASTS": {
+            return {
+                ...state,
+                toasts: []
+            };
+        }
     }
 }

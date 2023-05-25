@@ -35,11 +35,15 @@ type DismissToast = ActionBase & {
     id: string;
 };
 
+type ClearToasts = ActionBase & {
+    type: "CLEAR_TOASTS";
+};
+
 /**
  * Union of all actions
  */
 
-export type Action = SetPage | SetFilename | SetHexes | ShowToast | DismissToast;
+export type Action = SetPage | SetFilename | SetHexes | ShowToast | DismissToast | ClearToasts;
 
 /**
  * Action creators
@@ -71,4 +75,8 @@ export const showToast = (toast: Toast): ShowToast => ({
 export const dismissToast = (id: string): DismissToast => ({
     type: "DISMISS_TOAST",
     id
+});
+
+export const clearToasts = (): ClearToasts => ({
+    type: "CLEAR_TOASTS"
 });

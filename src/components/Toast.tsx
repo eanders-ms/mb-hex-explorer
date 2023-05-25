@@ -75,13 +75,16 @@ const ToastContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     text-align: left;
+    justify-content: center;
 `;
 
 const ToastText = styled.div`
     white-space: nowrap;
-    overflow: ellipsis;
     text-overflow: ellipsis;
     font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 `;
 
 const ToastDetail = styled.div`
@@ -89,10 +92,9 @@ const ToastDetail = styled.div`
 `;
 
 const ToastDismissBtn = styled.div`
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
     pointer-events: auto;
+    align-items: center;
+    display: flex;
 `;
 
 const ToastDismissIcon = styled(FontAwesomeIcon)`
@@ -104,9 +106,8 @@ const ToastDismissIcon = styled(FontAwesomeIcon)`
 `;
 
 const ToastSpinnerContainer = styled.div`
+    align-items: center;
     display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
 `;
 
 const ToastSlider = styled.div<{
@@ -152,16 +153,12 @@ function Toast(props: ToastWithId) {
                 </ToastContentContainer>
                 {!props.hideDismissBtn && !props.showSpinner && (
                     <ToastDismissBtn onClick={handleDismissClicked}>
-                        <div>
-                            <ToastDismissIcon icon={faTimesCircle} />
-                        </div>
+                        <ToastDismissIcon icon={faTimesCircle} />
                     </ToastDismissBtn>
                 )}
                 {props.showSpinner && (
                     <ToastSpinnerContainer>
-                        <div>
-                            <FontAwesomeIcon icon={faCircleNotch} className='fa-spin' />
-                        </div>
+                        <FontAwesomeIcon icon={faCircleNotch} className='fa-spin' />
                     </ToastSpinnerContainer>
                 )}
             </ToastCard>

@@ -29,7 +29,7 @@ export async function loadHexFileAsync(file: File) {
                             const arr = muh.separateUniversalHex(str);
                             const hexes = arr.map(elem => {
                                 const hex: MappedHex = {
-                                    device: "BBC micro:bit 0x" + elem.boardId.toString(16).toUpperCase(),
+                                    device: "Board ID: 0x" + elem.boardId.toString(16).toUpperCase(),
                                     chunks: parseDataChunks(elem.hex)
                                 };
                                 return hex;
@@ -39,7 +39,7 @@ export async function loadHexFileAsync(file: File) {
                             str = decompressCachedHex(str);
                             const hexes = [
                                 {
-                                    device: "MakeCode Cached Hex",
+                                    device: "Cached Hex (MakeCode)",
                                     chunks: parseDataChunks(str)
                                 }
                             ];

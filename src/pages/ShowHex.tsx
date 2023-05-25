@@ -3,6 +3,9 @@ import { useContext } from "react";
 import { AppStateContext } from "../state/AppStateContext";
 import { DataChunk, MappedHex } from "../types";
 import { padZeros, commaFormatted } from "../utils";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { setPage } from "../state/actions";
 
 const PageContainer = styled.div`
     width: 100%;
@@ -74,6 +77,13 @@ const FilenameHeader = styled.div`
     font-size: 1.25em;
     padding: 0.5em 0.25em;
     background-color: #c4b5fd;
+    display: flex;
+    flex-direction: row;
+`;
+
+const HomeIcon = styled(FontAwesomeIcon)`
+    cursor: pointer;
+    margin-right: 0.5em;
 `;
 
 function RenderHexFile(hex: MappedHex) {
@@ -92,7 +102,11 @@ export default function Render() {
 
     return (
         <PageContainer>
-            <FilenameHeader>{state.filename}</FilenameHeader>
+            <FilenameHeader>
+                <div>{state.filename}</div>
+                <div style={{ flex: 1 }} />
+                <HomeIcon icon={faHome} onClick={() => dispatch(setPage("drop-hex"))} />
+            </FilenameHeader>
             {state.hexes.map((hex, index) => (
                 <RenderHexFile key={index} {...hex} />
             ))}
